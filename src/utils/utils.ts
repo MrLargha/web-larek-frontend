@@ -133,3 +133,13 @@ export function createElement<
     }
     return element;
 }
+
+export function formatNumber(x: number) {
+    let price = String(x);
+
+    if (price.length > 4) {
+        price = Intl.NumberFormat('ru-RU').format(x);
+    }
+    
+    return price
+}
